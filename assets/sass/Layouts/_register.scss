@@ -1,0 +1,127 @@
+.registerAccount{
+    margin-top: 50px;
+    background: $secondary-color;
+    height: 650px;
+}
+.register{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    .left__registerAccount{
+        width: 30%;
+    }
+    .right__registerAccount{
+        width: 70%;
+        margin-left: 100px;
+    }
+    .left__registerAccount{
+        @include flex(center,center);
+        .fa-solid{
+            font-size: 300px;
+            color: $bg-color;
+        }
+    }
+    .left__registerAccount a {
+        text-decoration: none;
+    }
+    .left__registerAccount p {
+        font-size: 50px;
+        color: $bg-color;
+    }
+    .right__coverRegister{
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .register__coverItems{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 10px 0;
+    }
+    .gender__tittle{
+        font-size: 25px;
+        font-weight: 500;
+        color: black;
+    }
+    .gender__category{
+        display: flex;
+        width: 50%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+    .gender__category label {
+        display: flex;
+        align-items: center;
+    }
+    .gender__category .dot{
+        height: 18px;
+        width: 18px;
+        background: #d9d9d9;
+        border-radius: 50px;
+        margin-right: 10px;
+        border: 5px solid transparent;
+        transition: all .3s;
+    }
+    #dot-1:checked ~ .gender__category label .one, 
+    #dot-2:checked ~ .gender__category label .two,
+    #dot-3:checked ~ .gender__category label .three {
+        border-color: #d9d9d9;
+        background: $primary-color;
+    }
+    .register__form input[type ='radio']{
+        display: none;
+    } 
+}
+@include resposive("large") {
+    .register{
+        .left__registerAccount{
+            width: 30%;
+        }
+        .right__registerAccount{
+            width: 70%;
+        }
+        .left__registerAccount{
+            @include flex(center,center);
+            .fa-solid{
+                font-size: 200px;
+                color: $bg-color;
+            }
+        }
+        .left__registerAccount p {
+            font-size: 30px;
+            color: $bg-color;
+        }
+        .register__items{
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .gender__category{
+            width: 100%;
+        }
+        .register__coverItems{
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+        .register__coverItems::-webkit-scrollbar{
+            width: 0;
+        }
+    }
+}
+@include resposive("medium-large") {
+    .register{
+        gap: 20px;
+        flex-direction: column;
+        .left__cover p {
+            display: none;
+        }
+        .left__registerAccount{
+            display: none;
+        }
+        .right__registerAccount{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 40px;
+        }
+    }
+}

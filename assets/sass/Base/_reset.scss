@@ -1,0 +1,11 @@
+// Reset code for entire website
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Nunito Sans', sans-serif;
+    @include styleText($font-color,$fs-md,$fw-sm);
+    background-color: $bg-color;
+}

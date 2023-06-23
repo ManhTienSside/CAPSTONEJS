@@ -1,0 +1,29 @@
+.groupNumber #amount{
+    width: 50px;
+    border: 1px solid #ececec;
+    text-align: center;
+}
+.register{
+    .register__items{
+        margin-bottom: 15px;
+        width: calc(100%/2 - 10px);
+    }
+    .form__label{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 1px;
+    }
+    .form__input{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        transition: all .3s;
+        &:hover{
+                border-color: $primary-color;
+        }
+    }
+}

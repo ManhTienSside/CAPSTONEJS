@@ -1,0 +1,74 @@
+//* COLOR
+$primary-color: #0085ff;
+$secondary-color: #20283f;
+$font-color: #66696c;
+$bg-color: #fff;
+$bg-grey: #2a3147;
+$heading-color: #252729;
+$border-color: transparent;
+$border-color-light: #e2e6eb;
+$box-color: hsla(0, 0%, 100%, 0.1);
+
+//* FONT SIZE
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 26px;
+$fs-xl: 32px;
+
+/*
+! UNUSED FONT SIZE
+$fs-1: 14px;
+$fs-2: 1.1rem;
+$fs-3: 1.8rem;
+$fs-4: 70px;
+$fs-5: 1.6rem;
+$fs-6: 2.25rem;
+$fs-7: 20px;
+$fs-8: 44px;
+*/
+
+//* FONT WEIGHT
+$fw-xs: 200;
+$fw-sm: 300;
+$fw-md: 500;
+$fw-lg: 700;
+$fw-xl: 900;
+
+//* LINE HEIGHT
+$lh-sm: 1.333em;
+$lh-md: 1.75em;
+
+//* LETTER SPACING
+/*
+! UNUSED LETTER SPACING
+$ls-1: 0.015rem;
+$ls-2: 0.03rem;
+*/
+
+//* PADDING
+$pd-xs: 10px;
+$pd-sm: 20px;
+$pd-md: 30px;
+$pd-lg: 40px;
+$pd-xl: 50px;
+
+//* MARGIN
+$mg-xs: 10px;
+$mg-sm: 20px;
+$mg-md: 30px;
+$mg-lg: 40px;
+$mg-xl: 50px;
+
+//* BORDER
+$border-radius: 8px;
+
+//* BREAKPOINTS
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium-large": 768px,
+    "medium-small": 576px,
+    "small": 480px,
+    "extra-small": 375px
+);

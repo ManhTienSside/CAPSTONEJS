@@ -1,0 +1,27 @@
+// Vendor (import file scss, riêng file css gắn ở html)
+
+// Helper
+@import "./Helper/variables";
+@import "./Helper/mixins";
+
+// Base
+@import "./Base/reset";
+@import "./Base/customize";
+@import "./Base/responsive";
+
+// Components
+@import "./Components/button";
+@import "./Components/input";
+
+// Layouts
+@import "./Layouts/header";
+@import "./Layouts/carousel";
+@import "./Layouts/detailProduct";
+@import "./Layouts/login";
+@import "./Layouts/register";
+@import "./Layouts/cart";
+// Pages
+
+// Theme
+
+

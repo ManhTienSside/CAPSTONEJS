@@ -1,0 +1,67 @@
+/***
+ *  TODO: configure text style
+ ** @param $color: text color
+ ** @param $fs: text font size
+ ** @param $fw: text font weight
+ */
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin formDetail($mg,$pdb,$bb){
+    margin-bottom: $mg;
+    padding-bottom: $pdb;
+    border-bottom: $bb;
+}
+@mixin styleTitle($color, $fs, $lh, $fw){
+    color: $color;
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+}
+/***
+ *  TODO: configure button style
+ ** @param $bg: background color / background image
+ ** @param $pdY: padding top + padding bottom
+ ** @param $pdX: padding left + padding right
+ ** @param $border: border width, border style, border color
+ ** @param $radius: border radius
+ */
+@mixin styleButton($wh, $ht, $bg1, $border, $bg2) {
+    width: $wh;
+    height: $ht;
+    outline: none;
+    background-color: $bg1;
+    border: $border;
+    &:hover{
+        background-color: $bg2;
+    }
+}
+@mixin flex($items,$jcontent){
+    display: flex;
+    align-items: $items;
+    justify-content: $jcontent;
+}
+
+
+/***
+ *  TODO: configure button style
+ ** @param $bg: background color / background image
+ ** @param $pdY: padding top + padding bottom
+ ** @param $pdX: padding left + padding right
+ ** @param $border: border width, border style, border color
+ ** @param $radius: border radius
+ */
+@mixin resposive($screen){
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        //tìm thấy màn hình
+        $value: map-get($map: $breakpoints, $key: $screen);
+        //CSS3
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    // @warn("Man hinh khong tim thay")
+}

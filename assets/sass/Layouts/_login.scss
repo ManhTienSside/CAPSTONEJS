@@ -1,0 +1,156 @@
+.header__cover{
+    margin: 20px 0;
+    @include flex(center, space-between);
+    img{
+        background-color: $secondary-color;
+    }
+}
+.header__right{
+    display: flex;
+}
+.header__right a{
+    text-decoration: none;
+    color: $primary-color;
+}
+.loginAccount{
+    margin-top: 50px;
+    background: $secondary-color;
+    height: 650px;
+}
+.account{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .left__account,.right__account{
+        width: 50%;
+    }
+}
+.left__account{
+    @include flex(center,center);
+    .fa-solid{
+        font-size: 300px;
+        color: $bg-color;
+        margin-bottom: 40px;
+    }
+}
+.left__account a {
+    text-decoration: none;
+}
+.left__account p {
+    font-size: 50px;
+    color: $bg-color;
+}
+.right__account{
+    height: 100%;
+    @include flex(center,center);
+}
+.right__cover{
+    background-color: $bg-color;
+    border-radius: 10px;
+    padding: 60px;
+}
+.right__header h1{
+    color: #252729;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.form__input{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    transition:.25s ease;
+}
+
+.footer__login{
+    padding-top: 25px;
+    border-top: 1px solid #e2e6eb;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    span{
+        display: inline-block;
+        padding: 0 10px;
+        background-color: white;
+        position: absolute;
+        top: -12px;
+        left: 40%;
+    }
+    
+}
+.footer__login a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size:15px;
+    color: #252729;
+    padding: 3px 5px;
+    &:hover{
+            background-color: $box-color;
+            color: $primary-color;
+        
+    }
+}
+@include resposive("large") {
+    .account{
+        gap:50px;
+    }
+    .left__account{
+        .fa-solid{
+            font-size: 200px;
+            color: $bg-color;
+            margin-bottom: 40px;
+        }
+    }
+    .left__account p {
+        font-size: 35px;
+        color: $bg-color;
+    }
+    .right__cover{
+        background-color: $bg-color;
+        border-radius: 10px;
+        padding: 40px;
+    }
+    .footer__login{
+        gap: 10px;
+    }
+    .footer__login a {
+        font-size:13px;
+        border: 1px solid transparent;
+    }
+}
+@include resposive("medium-large") {
+    .account{
+        gap:50px;
+        .left__account{
+            width: 30%;
+        }
+        .right__account{
+            width: 70%;
+        }
+    }
+}
+@include resposive("medium-small"){
+    .header__right{
+        display: none;
+    }
+    .account{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .left__cover{
+        .fa-solid{
+            margin-top: 10px;
+            font-size: 100px !important;
+            color: $bg-color;
+            margin-bottom: 10px;
+        }
+    }
+    .left__cover p {
+        display: none;
+    }
+}
