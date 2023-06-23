@@ -1,0 +1,8 @@
+.product{
+    margin-top: 30px;
+    .product__cover{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap: 30px;
+    }
+}

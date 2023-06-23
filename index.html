@@ -34,11 +34,12 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-
     <!--* Custom SCSS -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/sass/main.scss" />
+    <!-- cssSAss -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css.map" />
   </head>
-
   <body>
     <header>
       <div class="headStore container">
@@ -133,11 +134,138 @@
         </div>
       </div>
     </section>
-    <section class="carousel"></section>
-    <section class="gallery"></section>
-    <section class="sales"></section>
+    <section class="carousel">
+      <div class="container">
+        <div class="carousel__cover">
+          <div class="carousel__items">
+            <img
+              class="img-fluid"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_m6eH-SXjagVuET_EA-fyXgFku1BNctrcg&usqp=CAU"
+              alt="backgroup"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container">
+        <div class="product__cover">
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/img/Frame 14 (2).png"
+              class="card-img-top"
+              alt="items"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p>$90</p>
+              <a href="./view/detail.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer></footer>
-
     <!--* Bootstrap JS Bundles -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -149,5 +277,7 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./controllers/main.js"></script>
   </body>
 </html>

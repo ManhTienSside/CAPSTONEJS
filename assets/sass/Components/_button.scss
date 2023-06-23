@@ -34,6 +34,10 @@
     border-radius: 4px;
     @include styleButton(100%,100%,#d9d9d9,none,$primary-color)
 }
+.buyCarosel{
+    @include styleButton(200px,50px,$bg-color,1px solid transparent,$bg-color);
+    border-radius: 40px;
+}
 @include resposive("large") {
     .detailProduct{
         .addProduct{
