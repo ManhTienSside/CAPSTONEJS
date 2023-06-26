@@ -4,7 +4,7 @@ function setLocalStorage(account) {
 function getLocalStorage() {
     var acc = JSON.parse(localStorage.getItem('account'));
     if(acc!== null){
-        
+        // showAccount(acc);
     }
 }
 getLocalStorage();
@@ -19,8 +19,6 @@ function getArrayShoes() {
             console.log(error);
         });
 }
-getArrayShoes();
-
 function showInfo(array) {
     var content = '';
     array.content.map(shoes => {
@@ -62,6 +60,8 @@ function findByCatogogy(categoryId) {
             console.log(error);
         });
 }
+
+
 
 
 
