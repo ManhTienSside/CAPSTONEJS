@@ -1,24 +1,16 @@
-function setLocalStorage(account) {
-    localStorage.setItem('account',JSON.stringify(account));
-}
-function getLocalStorage() {
-    var acc = JSON.parse(localStorage.getItem('account'));
-    if(acc!== null){
-        // showAccount(acc);
-    }
-}
-getLocalStorage();
 function getArrayShoes() {
     axios({
         method: 'get',
         url: 'https://shop.cyberlearn.vn/api/Product',
         })
         .then(function (response) {
+            console.log(response.data);
             showInfo(response.data);
         }).catch(function (error) {
             console.log(error);
         });
 }
+getArrayShoes();
 function showInfo(array) {
     var content = '';
     array.content.map(shoes => {
@@ -39,11 +31,13 @@ function showInfo(array) {
             <button class ="btn btn-primary"> Buy Now </button>
         </div>
         </a>
-        </div>`
+        </div>
+        `
         content += cardItems;
     });
     document.querySelector('.product__cover').innerHTML = content;
 }
+
 document.getElementById('txtnotify').onkeyup = function () {
     var name = document.getElementById('txtnotify').value;
     findByCatogogy(name);
@@ -60,6 +54,8 @@ function findByCatogogy(categoryId) {
             console.log(error);
         });
 }
+
+
 
 
 
