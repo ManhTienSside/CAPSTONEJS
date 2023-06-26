@@ -40,7 +40,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header2">
       <div class="container">
         <div class="header__cover">
           <div class="header__left">
@@ -75,41 +75,55 @@
               <div class="register__coverItems">
                 <div class="register__items">
                   <span class="form__label" for="">Email</span>
-                  <input class="form__input" type="text" />
+                  <input id="emailtxt" class="form__input" type="text" />
                   <span id="spanEmail" class="text-danger"></span>
                 </div>
                 <div class="register__items">
                   <span class="form__label" for="">Password</span>
-                  <input class="form__input" type="password" />
+                  <input id="passtxt" class="form__input" type="password" />
                   <span id="spanPassword" class="text-danger"></span>
                 </div>
                 <div class="register__items">
                   <span class="form__label" for="">Password Confirm</span>
-                  <input class="form__input" type="password" />
+                  <input
+                    id="confirmPasstxt"
+                    class="form__input"
+                    type="password"
+                  />
                   <span id="spanPasswordConfirm" class="text-danger"></span>
                 </div>
                 <div class="register__items">
                   <span class="form__label" for="">name</span>
-                  <input class="form__input" type="text" />
+                  <input id="nametxt" class="form__input" type="text" />
                   <span id="spanName" class="text-danger"></span>
                 </div>
                 <div class="register__items">
                   <span class="form__label" for="">Phone</span>
-                  <input class="form__input" type="text" />
+                  <input id="phonetxt" class="form__input" type="text" />
                   <span id="spanPhone" class="text-danger"></span>
                 </div>
               </div>
               <div class="gender__items">
-                <input type="radio" name="gender" value="true" id="dot-1" />
-                <input type="radio" name="gender" value="false" id="dot-2" />
+                <div class="input__cover"></div>
                 <span class="gender__tittle" for="">Gender</span>
                 <div class="gender__category">
                   <label for="dot-1">
-                    <span class="dot one"></span>
+                    <input
+                      checked
+                      type="radio"
+                      name="gender"
+                      value="true"
+                      id="dot-1"
+                    />
                     <span class="gender">Male</span>
                   </label>
                   <label for="dot-2">
-                    <span class="dot two"></span>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="false"
+                      id="dot-2"
+                    />
                     <span class="gender">Female</span>
                   </label>
                 </div>
@@ -132,5 +146,10 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../controllers/validation.js"></script>
+    <script src="../models/User.js"></script>
+    <script src="../models/ListUser.js"></script>
+    <script src="../controllers/register.js"></script>
   </body>
 </html>

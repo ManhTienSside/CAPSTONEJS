@@ -1,8 +1,20 @@
 .product{
+    a{
+        text-decoration: none;
+    }
     margin-top: 30px;
     .product__cover{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
         gap: 30px;
+    }
+    .card {
+        border-radius: 26px;
+        background: #181823;
+        box-shadow:  19px 19px 28px #0b0b10,
+                -19px -19px 28px #252536;
+        .card-title,.card-text {
+            color: $bg-color;
+        }
     }
 }

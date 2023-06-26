@@ -1,8 +1,5 @@
 header{
     position: relative;
-    // top: 0;
-    // left: 0;
-    // right: 0;
     width: 100%;
     background-color: $secondary-color;
     .collapse{
@@ -107,6 +104,9 @@ header{
         justify-content:space-between;
         
         .headerTop__items{
+            a{
+                text-decoration: none;
+            }
             margin-top: 12px;
             display: flex;
             justify-content: space-between;

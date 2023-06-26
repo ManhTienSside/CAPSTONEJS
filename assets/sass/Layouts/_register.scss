@@ -1,6 +1,9 @@
+.header2{
+    background-color: #24262D;
+}
 .registerAccount{
     margin-top: 50px;
-    background: $secondary-color;
+    background: #24262D;
     height: 650px;
 }
 .register{
@@ -32,6 +35,10 @@
         background-color: #fff;
         border-radius: 10px;
         padding: 30px;
+        border-radius: 39px;
+        background: linear-gradient(145deg, #1a1a25, #161620);
+        box-shadow:  22px 22px 44px #0a0a0e,
+                -22px -22px 44px #262638;
     }
     .register__coverItems{
         display: flex;
@@ -42,7 +49,7 @@
     .gender__tittle{
         font-size: 25px;
         font-weight: 500;
-        color: black;
+        color: 181823;
     }
     .gender__category{
         display: flex;
@@ -63,14 +70,11 @@
         border: 5px solid transparent;
         transition: all .3s;
     }
-    #dot-1:checked ~ .gender__category label .one, 
-    #dot-2:checked ~ .gender__category label .two,
-    #dot-3:checked ~ .gender__category label .three {
-        border-color: #d9d9d9;
-        background: $primary-color;
-    }
     .register__form input[type ='radio']{
-        display: none;
+        display: block;
+        height: 18px;
+        width: 18px;
+        margin-right: 10px;
     } 
 }
 @include resposive("large") {

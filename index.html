@@ -9,7 +9,18 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StoreWave X - Home</title>
-
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <!--* Google Font: Nunito Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +55,7 @@
     <header>
       <div class="headStore container">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="./index.html">
             <img
               src="https://assets.website-files.com/62f51a90d298e6f454bbffca/630d30dc9ad89c4a3aad5921_storewave-x-webflow-template-logo.svg"
               alt="logo"
@@ -99,8 +110,13 @@
               </li>
             </ul>
             <form class="form-inline">
-              <input class="form-control" type="search" placeholder="Search" />
-              <button class="btn-search" type="button"></button>
+              <input
+                id="txtnotify"
+                class="form-control"
+                type="search"
+                placeholder="Search"
+              />
+              <button id="txtsearch" class="btn-search" type="button"></button>
             </form>
           </div>
           <div class="headDetail">
@@ -125,26 +141,41 @@
         <div class="headerTop__items">
           <div class="items__alet">
             <i class="fa-sharp fa-regular fa-bell"></i>
-            <span class="sp-color">Thong Bao</span>
+            <a href="./view/login.html">
+              <span class="sp-color">Đăng Nhập</span>
+            </a>
           </div>
           <div class="items__account">
             <i class="fa-solid fa-user"></i>
-            <span class="sp-color">Nguyen Manh Tien</span>
+            <span class="sp-color">WellCome</span>
           </div>
         </div>
       </div>
     </section>
     <section class="carousel">
-      <div class="container">
-        <div class="carousel__cover">
-          <div class="carousel__items">
-            <img
-              class="img-fluid"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_m6eH-SXjagVuET_EA-fyXgFku1BNctrcg&usqp=CAU"
-              alt="backgroup"
-            />
-          </div>
-        </div>
+      <div class="banner">
+        <img
+          src="https://i.pinimg.com/originals/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://sneakerholicvietnam.vn/wp-content/uploads/2020/08/maxresdefault-1.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://i.ytimg.com/vi/5ETkNjeOPBg/maxresdefault.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg"
+          alt="banner"
+        />
       </div>
     </section>
     <section class="product">
@@ -273,11 +304,18 @@
       crossorigin="anonymous"
     ></script>
     <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./controllers/main.js"></script>
+    <script>
+      $(".carousel").slick();
+    </script>
   </body>
 </html>

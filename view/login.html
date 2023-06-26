@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="../assets/css/main.css.map" />
   </head>
   <body>
-    <header>
+    <header class="header2">
       <div class="container">
         <div class="header__cover">
           <div class="header__left">
@@ -55,7 +55,7 @@
           </div>
           <div class="header__right">
             <p>Bạn mới biết đến StoreWaveX?</p>
-            <a href="#">Dang ki</a>
+            <a href="../view/register.html">Dang ki</a>
           </div>
         </div>
       </div>
@@ -79,15 +79,18 @@
             <form class="login__form">
               <div class="login__account">
                 <label class="form__label" for="">Email</label>
-                <input class="form__input" type="text" />
+                <input id="emailLogin" class="form__input" type="email" />
+                <span id="spanEmail" class="text-danger"></span>
               </div>
               <div class="login__password">
                 <label class="form__label" for="">mat khau</label>
                 <input
+                  id="passLogin"
                   class="form__input"
                   type="password"
                   placeholder="Enter Your Password"
                 />
+                <span id="spanPassword" class="text-danger"></span>
               </div>
               <button class="btbAccount" type="button">Login</button>
               <div class="footer__login">
@@ -126,6 +129,8 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-    <script src="../controllers/Validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../controllers/validation.js"></script>
+    <script src="../controllers/login.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     }
     .right__detailProduct{
         width: 30%;
+        
     }
     .left__detail--cover{
         border: 2px solid transparent;
@@ -15,30 +16,39 @@
     .right__detail {
         height: 100%;
         padding: 32px 32px 48px;
-        border: 1px solid #e2e6eb;
-        background-color: #fff;
-        border-radius: 16px;
+        border-radius: 26px;
+        background: #181823;
+        box-shadow:  19px 19px 28px #0b0b10,
+                -19px -19px 28px #252536;
     }
     .right__detail--top, .right__detail--middle{
         @include formDetail($mg-md + 2, $pd-md, 1px solid #e2e6eb);
         h5{
             @include styleTitle($heading-color,$fs-lg - 4,1.364em,$fw-md);
         }
+        
     }
     .right__detail--top{
+        h5{
+            color:$bg-color;
+        }
         span{
             @include styleTitle($heading-color,$fs-lg,1.462em,$fw-md);  
         }
     }
     .right__detail--middle{
+        
         li{
             list-style: none;
             span{
-                @include styleTitle($heading-color,$fs-sm,1.143em,$fw-sm);
+                @include styleTitle($bg-color,$fs-sm,1.143em,$fw-sm);
             }
         }
     }
     .right__detail--bottom{
+        a{
+            text-decoration: none;
+        }
         .groupSize,.groupNumber{
             margin-bottom: 30px;
         }

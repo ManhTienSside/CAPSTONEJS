@@ -6,6 +6,15 @@
 }
 html,body{
     font-family: 'Nunito Sans', sans-serif;
-    @include styleText($font-color,$fs-md,$fw-sm);
-    background-color: $bg-color;
+    @include styleText($bg-color,$fs-md,$fw-sm);
+    background-color: #24262D;
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style-type: none;
+}
+p, span {
+    @include styleText($bg-color,$fs-md,$fw-sm);
 }

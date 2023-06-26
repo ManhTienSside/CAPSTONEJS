@@ -33,7 +33,18 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <!--* Custom SCSS -->
     <link rel="stylesheet" href="../assets/sass/main.scss" />
     <!-- cssSAss -->
@@ -45,7 +56,7 @@
     <header>
       <div class="headStore container">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="../index.html">
             <img
               src="https://assets.website-files.com/62f51a90d298e6f454bbffca/630d30dc9ad89c4a3aad5921_storewave-x-webflow-template-logo.svg"
               alt="logo"
@@ -100,8 +111,13 @@
               </li>
             </ul>
             <form class="form-inline">
-              <input class="form-control" type="search" placeholder="Search" />
-              <button class="btn-search" type="button"></button>
+              <input
+                id="txtnotify"
+                class="form-control"
+                type="search"
+                placeholder="Search"
+              />
+              <button id="txtsearch" class="btn-search" type="button"></button>
             </form>
           </div>
           <div class="headDetail">
@@ -135,34 +151,47 @@
         </div>
       </div>
     </section>
+    <section class="carousel">
+      <div class="banner">
+        <img
+          src="https://i.pinimg.com/originals/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://sneakerholicvietnam.vn/wp-content/uploads/2020/08/maxresdefault-1.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://i.ytimg.com/vi/5ETkNjeOPBg/maxresdefault.jpg"
+          alt="banner"
+        />
+      </div>
+      <div class="banner">
+        <img
+          src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg"
+          alt="banner"
+        />
+      </div>
+    </section>
     <section class="container detailProduct">
       <div class="left__detailProduct">
         <div class="left__detail--cover">
-          <img
-            class="img-fluid"
-            src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b7fd9018-e0ce-4adc-9320-a05b67eef078/air-jordan-1-mid-shoes-SQf7DM.png"
-            alt="products"
-          />
+          <img id="imageDetail" class="img-fluid" src="#" alt="products" />
         </div>
       </div>
       <div class="right__detailProduct">
         <div class="right__detail">
           <div class="right__detail--top">
-            <h5>Basic Gray T-Shirt</h5>
-            <p>
+            <h5 id="nameDetail">Basic Gray T-Shirt</h5>
+            <p id="descriptionDetail">
               Nisi quis eleifend quam adipiscing vitae aliquet bibendum enim
               facilisis gravida neque
             </p>
-            <span>$ 29.99 USD</span>
-          </div>
-          <div class="right__detail--middle">
-            <h5>Product information</h5>
-            <ul>
-              <li><span>Brand:</span> Fashion Co.</li>
-              <li><span>Model name:</span> Basic Gray T-Shirt</li>
-              <li><span>Color:</span> Grey</li>
-              <li><span>Size:</span> Medium</li>
-            </ul>
+            <p id="priceDetail"><span>$</span> 29.99USD</p>
           </div>
           <div class="right__detail--bottom">
             <form action="">
@@ -182,10 +211,12 @@
               </div>
               <div class="groupNumber">
                 <button type="button" id="minus">-</button>
-                <input id="amount" type="text" min="1" value="1" />
+                <input id="amount" type="number" min="1" value="1" />
                 <button type="button" id="plus">+</button>
               </div>
-              <button class="addProduct">ADD TO CARD</button>
+              <a id="changeCart" class="btn btn-primary" href="#">
+                ADD TO CARD</a
+              >
             </form>
           </div>
         </div>
@@ -199,10 +230,20 @@
       crossorigin="anonymous"
     ></script>
     <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../models/CartItem.js"></script>
+    <script src="../models/ListCart.js"></script>
     <script src="../controllers/details.js"></script>
+    <script>
+      $(".carousel").slick();
+    </script>
   </body>
 </html>

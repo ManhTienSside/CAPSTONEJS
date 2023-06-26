@@ -1,6 +1,11 @@
 .carousel{
-    .carousel__cover{
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_m6eH-SXjagVuET_EA-fyXgFku1BNctrcg&usqp=CAU);
+    img{
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
     }
-    
+    .banner{
+        text-align: center;
+        width: 100%;
+    }
 }
